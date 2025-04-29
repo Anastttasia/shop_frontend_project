@@ -14,7 +14,7 @@ const Header = () => {
                     <p className='headerNameLogo'>NOZO</p>
                 </Link>
                 <Link className='linkStyle'>
-                    <div className='btnCatalog'><img src={bagLogo} alt='bagLogo' className='btnLogoCatalog'></img>Каталог</div>
+                    <div className='btnCatalog'><img src={bagLogo} alt='bagLogo' className='btnLogoCatalog'></img>Catalog</div>
                 </Link>
             </div>
 
