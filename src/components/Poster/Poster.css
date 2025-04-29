@@ -1,0 +1,94 @@
+.imgContainerBanner{
+    position: relative;
+}
+
+.sectionBanner{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+}
+
+.image{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+}
+
+.titlePoster{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    font-size: 90px;
+    color: rgba(255, 255, 255, 0.61);
+}
+
+.subtitlePoster{
+    position: absolute;
+    bottom: 100px;
+    left: 70px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.719);
+}
+
+.buttonPoster{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    font-size: 15px;
+    padding: 1rem 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.685);
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.315);
+    color: white;
+    background-color: rgb(8, 56, 4);
+    border-radius: 15px;
+}
+
+.buttonPoster:hover{
+    box-shadow: 7px 7px 7px rgba(245, 243, 243, 0.452);
+    background-color: rgb(8, 24, 7);
+}
+
+@media (max-width: 1100px) {
+    .titlePoster{
+        font-size: 70px;
+        top: 10px;
+    }
+
+    .subtitlePoster{
+        bottom: 100px;
+        left: 80px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 910px) {
+    .titlePoster{
+        font-size: 50px;
+        top: 10px;
+    }
+
+    .subtitlePoster{
+        left: 70px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 690px) {
+    .titlePoster{
+        font-size: 40px;
+    }
+
+    .subtitlePoster{
+        bottom: 80px;
+        left: 70px;
+        font-size: 25px;
+    }
+
+    .buttonPoster{
+        bottom: 30px;
+        left: 70px;
+        font-size: 15px;
+        padding: 1rem 3rem;
+        border-radius: 10px;
+    }
+}
