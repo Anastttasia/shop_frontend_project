@@ -4,8 +4,10 @@ import AppRoutes from "../Routes/Routes";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import { getCategoties } from "../../features/categories/categoriesSlice";
 import Sidebar from "../Sidebar/Sidebar";
+
+import { getCategoties } from "../../features/categories/categoriesSlice";
+import { getProducts } from "../../features/products/productsSlice";
 
 
 const App = () =>{
@@ -13,6 +15,7 @@ const App = () =>{
 
     useEffect(() => {
         dispatch(getCategoties());
+        dispatch(getProducts());
     }, [dispatch])
 
     return(
@@ -22,7 +25,7 @@ const App = () =>{
                 <Sidebar/>
                 <AppRoutes/>
             </div>
-            <Footer />
+   
         </div>
     )
 }

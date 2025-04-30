@@ -3,9 +3,9 @@
   max-height: 100%;
   background-color: #d7ceceab;
   border-radius: 15px;
-  position: sticky;
+  /*position: sticky;
   top: 0;
-  left: 0;
+  left: 0;*/
   border: #01080ea9;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.062);
   display: flex;
@@ -16,29 +16,33 @@
 
 .sidebarTitle {
   text-transform: uppercase;
-  font-size: medium;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navMenu{
+  width: 100%;
 }
 
 .menu {
   padding: 0;
   margin: 0;
-  text-decoration: none;
-  color: black;
 }
 
 .menusection {
   display: block;
   text-decoration: none;
   color: black;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
   padding: 0.4rem;
   border-radius: 10px;
-  margin: 0.3rem 0;
+  font-size: 1rem;
+  margin: 0.5rem 0;
 }
 
 .menusection:hover{
   background-color: rgba(0, 0, 0, 0.075);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.089);
+  box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.089);
 }
 
 .menusectionActive {
@@ -46,4 +50,49 @@
   border: 1px solid rgba(0, 0, 0, 0.651);
 }
 
+@media (max-width: 1660px) {
+  .sidebarTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  .menusection {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 1490px) {
+  .menusection {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .menusection {
+    font-size: 10px;
+    margin: 8px 0;
+  }
+  
+}
+
+@media (max-width: 1232px) {
+
+}
+
+@media (max-width: 1170px) {
+.sidebar{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+  .sidebarTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  .menusection {
+    font-size: 1rem;
+  }
+}
  

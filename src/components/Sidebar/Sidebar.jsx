@@ -1,9 +1,9 @@
 import './Sidebar.css';
 import styles from  './Sidebar.css';
-import FilterLogo from '../../image/icon/icon_bag.svg'
+
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { isAction } from '@reduxjs/toolkit';
+
 
 const Sidebar = () => {
   const { list } = useSelector(({ categories }) => categories)
@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
       <p className='sidebarTitle'>Categories</p>
-      <nav>
+      <nav className='navMenu'>
         <ul className='menu'>
           {list.map(({ id, name }) => (
             <li key={id} className='menusection'>

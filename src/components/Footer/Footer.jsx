@@ -13,9 +13,9 @@ const Footer = () => {
       <div className='footer'>
         <Link to={ROUTES.HOME} className='linkStyle'><p className='headerNameLogo'>NOZO</p></Link>
         <div>
-          <img src={telegramLogo} alt='userLogo' className='headerLogo'></img>
-          <img src={vkLogo} alt='cartLogo' className='headerLogo'></img>
-          <img src={whatsappLogo} alt='cartLogo' className='headerLogo'></img>
+          <img src={telegramLogo} alt='userLogo' className='footerLogo'></img>
+          <img src={vkLogo} alt='cartLogo' className='footerLogo'></img>
+          <img src={whatsappLogo} alt='cartLogo' className='footerLogo'></img>
         </div>
       </div>
       <div className='footerText'>

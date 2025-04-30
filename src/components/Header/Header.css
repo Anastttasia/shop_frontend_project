@@ -19,7 +19,7 @@
     justify-content:space-between;
     align-items: center;
     z-index: 5;
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
   
   .headerNameLogo{
@@ -47,8 +47,8 @@
     color: white;
     border-radius: 50%;
     position: absolute;
-    top: 10;
-    right: 0;
+    top: 20px;
+    right: 30px;
     text-align: center;
     padding: 0.2%;
   }
