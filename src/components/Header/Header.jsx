@@ -6,7 +6,7 @@ import cartLogo from '../../image/icon/icon_cart.svg'
 import userLogo from '../../image/icon/icon_user.svg'
 import bagLogo from '../../image/icon/icon_bag.svg'
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../utils/routes';
 
 import { toggleForm } from '../../features/user/userSlice';
@@ -15,6 +15,8 @@ import { useEffect, useState } from 'react';
 
 const Header = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const { currentUser } = useSelector(({ user }) => user);
 
     const [values, setValues] = useState({ name: "Guest", avatar: userLogo });
@@ -27,7 +29,7 @@ const Header = () => {
 
     const handlClick = () => {
         if (!currentUser) dispatch(toggleForm(true));
-
+        else navigate(ROUTES.PROFILE)
     }
 
     return (
