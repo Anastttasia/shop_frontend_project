@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import './Products.css';
+import '../../styles/styleCatalog.css'
 
 const Products = ({ title, style = {}, products = [], amount }) => {
     const list = products.filter((_, i) => i < amount);
 
     return (
-        <section className='styleProducts' style={style}>
+        <section className='styleProducts styleSection' style={style}>
             {title && <h2>{title}</h2>}
             <div className='cardContainer'>
                 {list.map(({ id, images, title, category: { name: cat }, price }) => (

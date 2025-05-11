@@ -1,4 +1,7 @@
+import { useDispatch, useSelector } from 'react-redux';
+
 import './Header.css';
+
 import cartLogo from '../../image/icon/icon_cart.svg'
 import userLogo from '../../image/icon/icon_user.svg'
 import bagLogo from '../../image/icon/icon_bag.svg'
@@ -6,7 +9,27 @@ import bagLogo from '../../image/icon/icon_bag.svg'
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../utils/routes';
 
+import { toggleForm } from '../../features/user/userSlice';
+import { useEffect, useState } from 'react';
+
+
 const Header = () => {
+    const dispatch = useDispatch();
+    const { currentUser } = useSelector(({ user }) => user);
+
+    const [values, setValues] = useState({ name: "Guest", avatar: userLogo });
+
+    useEffect(() => {
+        if (!currentUser) return;
+
+        setValues(currentUser);
+    }, [currentUser])
+
+    const handlClick = () => {
+        if (!currentUser) dispatch(toggleForm(true));
+
+    }
+
     return (
         <header className='header'>
             <div className='logoBlock'>
@@ -18,8 +41,11 @@ const Header = () => {
                 </Link>
             </div>
 
-            <div>
-                <Link className='linkStyle'><img src={userLogo} alt='userLogo' className='headerLogo'></img></Link>
+            <div style={{ display: 'flex' }}>
+                <div className='userLogoBlock' onClick={handlClick}>
+                    <img src={userLogo} alt='userLogo' className='headerLogo'></img>
+                    <p style={{margin: '0'}}>{values.name}</p>
+                </div>
                 <Link className='linkStyle'><img src={cartLogo} alt='cartLogo' className='headerLogo'></img><span className='countItemCart'>13</span></Link>
 
             </div>
