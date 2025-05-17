@@ -70,7 +70,7 @@ const Category = () => {
         setParams({ ...defaultParams, ...values })
     }
 
-    
+
     const handleReset = () => {
         setValues(defaultValues)
         setParams(defaultParams)
@@ -84,21 +84,24 @@ const Category = () => {
             <h2>{cat}</h2>
             <form className='filters' onSubmit={handlSubmit}>
                 <div className='filter'>
-                    <span>Product name</span>
-                    <input type='text' name='title' onChange={handlChange} placeholder='Product name' value={values.title}></input>
+                    <span className='filtersName'>Product name</span>
+                    <input className='filtersInput' type='text' name='title' onChange={handlChange} placeholder='Name' value={values.title}></input>
                 </div>
                 <div className='filter'>
-                    <span>Price from</span>
-                    <input type='number' name='price_min' onChange={handlChange} placeholder='0' value={values.title}></input>
+                    <span className='filtersName'>Price from</span>
+                    <input className='filtersInput' type='number' name='price_min' onChange={handlChange} placeholder='0' value={values.title}></input>
                 </div>
                 <div className='filter'>
-                    <span>Price to</span>
-                    <input type='number' name='price_max' onChange={handlChange} placeholder='0' value={values.title}></input>
+                    <span className='filtersName'>Price to</span>
+                    <input className='filtersInput' type='number' name='price_max' onChange={handlChange} placeholder='0' value={values.title}></input>
                 </div>
                 <button type='submit' hidden />
             </form>
             {isLoading ? (
-                <div className='preloader'>Loading...</div>
+                <div className='overlay'>
+                    <div className='preloader'>Loading...</div>
+                </div>
+
             ) : !isSuccess || !items.length ? (
                 <div className='back'>
                     <span>No results</span>
@@ -108,8 +111,8 @@ const Category = () => {
                 <Products title="" products={items} style={{ padding: 0 }} amount={items.length} />
             )}
             {!isEnd && (
-                <div className='more'>
-                    <button onClick={() => setParams({ ...params, offset: params.offset + params.limit })}>See more</button>
+                <div className='moreContsiner'>
+                    <button className='more' onClick={() => setParams({ ...params, offset: params.offset + params.limit })}>See more</button>
                 </div>
             )}
 

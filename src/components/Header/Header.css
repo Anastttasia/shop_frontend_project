@@ -72,6 +72,16 @@ input:focus {
   border: none;
 }
 
+.boxSearch {
+  width: 210px;
+  position: absolute;
+  top: 75px;
+  background-color: #f8f3f3da;
+  border-radius: 15px;
+  padding: 1rem;
+  left: 185px;
+}
+
 .countItemCart {
   width: 20px;
   height: 20px;
@@ -110,6 +120,33 @@ input:focus {
 
 h3 {
   font-size: 20px;
+}
+
+.imageSearch{
+  background-image: url('./nikePro.png');
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.searchCart{
+  display: flex;
+  flex-direction: row;
+  background-color: #e4dada;
+  border-radius: 10px;
+  padding: 5px;
+  align-items: center;
+}
+
+.titleSearch{
+  font-size: medium;
+  margin: 0 5px
+}
+
+.titleSearch:hover{
+text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.288);
 }
 
 .slotHeader {
@@ -152,6 +189,13 @@ h3 {
     border-radius: 5px;
   }
 
+  .boxSearch {
+    width: 210px;
+    top: 55px;
+    padding: 1rem;
+    left: 95px;
+  }
+
   .headerLogo {
     width: 30px;
     height: 30px;
@@ -190,9 +234,16 @@ h3 {
   .searchFormInput {
     width: 60px;
   }
-  
-  .countItemCart{
+
+  .countItemCart {
     top: 5px;
     right: 5px;
+  }
+
+    .boxSearch {
+    width: 100px;
+    top: 55px;
+    padding: 1rem;
+    left: 72px;
   }
 }

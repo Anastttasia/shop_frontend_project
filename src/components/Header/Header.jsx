@@ -60,7 +60,7 @@ const Header = () => {
                             {isLoading ? 'Loading' : data == null || !data.length ? "No results" :
                                 data.map(({ title, images, id }) => {
                                     return (
-                                        <Link key={id} onClick={() => setSearchValue("")} to={`/products/${id}`}>
+                                        <Link className='searchCart' key={id} onClick={() => setSearchValue("")} to={`/products/${id}`}>
                                             <div className='imageSearch' style={{ backgroundImage: `url(${images[0]})` }} />
                                             <div className='titleSearch'>{title}</div>
                                         </Link>

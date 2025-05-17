@@ -121,6 +121,45 @@
     background-color: rgba(125, 199, 14, 0.171);
 }
 
+.filters{
+    max-width: 100%;
+    background-color: #D7CECE;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.filtersName{
+    font-size: medium;
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.664);
+}
+
+.filtersInput{
+    margin: 5px 0;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: medium;
+}
+
+.moreContsiner{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.more{
+    background-color: rgb(6, 65, 6);
+    color: white;
+    padding: 0.5rem 3rem;
+    border-radius: 6px;
+    font-size: larger;
+    margin-top: 2rem;
+}
+
 @media (max-width: 1814px) {
     .cardContainer{
         grid-template-columns: 1fr 1fr 1fr;
