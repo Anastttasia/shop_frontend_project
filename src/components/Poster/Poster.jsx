@@ -7,7 +7,7 @@ const Poster = () => (
         <div className='imgContainerBanner'>
             <div className='titlePoster'>BIG SALE 20%</div>
             <div className='subtitlePoster'>The bestseller</div>
-            <button className='buttonPoster'>Shop now</button>
+            {/* <button className='buttonPoster'>Shop now</button> */}
             <img src={bannerImg} className='image'></img>
         </div>
     </section>

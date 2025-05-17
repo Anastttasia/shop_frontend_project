@@ -36,7 +36,7 @@ const UsreLoginForm = ({ toggleCurrentFormType, closeForm }) => {
                 <input type='email' placeholder='Your email' name='email' value={values.email} autoComplete='off' onChange={handleChange} required></input>
                 <input type='password' placeholder='Your password' name='password' value={values.password} autoComplete='off' onChange={handleChange} required></input>
 
-                <div className='textForm' onClick={() => toggleCurrentFormType('signup')}><p>Create an account</p></div>
+                <div className='textForm' onClick={() => toggleCurrentFormType('signup')}><p className='textFormP'>Create an account</p></div>
 
                 <button type='submit'className='btnSubmitForm'>Login</button>
             </form>

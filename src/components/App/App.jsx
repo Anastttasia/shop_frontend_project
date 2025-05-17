@@ -24,10 +24,13 @@ const App = () => {
         <div className="app">
             <Header />
             <UserForm />
-            <div className="wrapper">
+            {/* <div className="wrapper">
                 <Sidebar />
                 <AppRoutes />
-            </div>
+            </div> */}
+
+            <AppRoutes />
+      
         </div>
     )
 }

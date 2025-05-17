@@ -12,8 +12,7 @@ const Products = ({ title, style = {}, products = [], amount }) => {
                     <Link to={`/products/${id}`} key={id} className='card'>
                         <div className='containerImgBlock' style={{ backgroundImage: `url(${images[0]})` }}></div>
                         <div className=''>
-                            <h3 className='titleProduct'>{title}</h3>
-                            <div className='cat'>{cat}</div>
+                            <div className='titleProduct'>{title}</div>
                             <div className='descriptionBlock'>
                                 <div className='priceProductBlock'>
                                     <div className='priceProduct'>{price}$</div>

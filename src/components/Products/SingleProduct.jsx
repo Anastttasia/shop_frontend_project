@@ -6,6 +6,7 @@ import Product from './Product';
 import Products from './Products';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRelatedProducts } from '../../features/products/productsSlice';
+import Footer from '../Footer/Footer';
 
 const SingleProduct = () => {
     const dispatch = useDispatch();
@@ -35,6 +36,7 @@ const SingleProduct = () => {
             <>
                 <Product {...data} />
                 <Products products={related} amount={5} title="Related products" />
+                <Footer />
             </>
         )
 

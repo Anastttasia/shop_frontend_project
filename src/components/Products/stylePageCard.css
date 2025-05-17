@@ -1,24 +1,55 @@
 .btnBack {
-    width: 3rem;
-    color: rgb(0, 174, 255);
+    background-color: rgba(6, 65, 6, 0.274);
+    color: rgb(0, 0, 0);
+    padding: 5px 2rem;
+    border-radius: 6px;
     font-size: small;
-    border: 1px solid rgba(0, 174, 255, 0.548);
-    border-radius: 3px;
+    border: none;
+    margin-top: 2px;
 
 }
 
 .btnBack:hover {
-    background-color: rgba(0, 174, 255, 0.171);
+    background-color: rgba(4, 44, 4, 0.404);
 }
 
 .pageCard {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 500px;
     display: flex;
     flex-direction: row;
     background-color: #D7CECE;
     border-radius: 15px;
     padding: 2rem;
+    margin: 1rem 0;
+}
+
+.containerImgProduct{
+    width: 600px;
+    height: 330px;
+    border-radius: 10px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.miniFotoProductContainer{
+    width: 110px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin-right: 1rem;
+    margin: 0 7px;
+}
+
+.containerImgExtra{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 2px 0;
 }
 
 .descriptionCard {
@@ -31,8 +62,8 @@
 
 .name {
     font-weight: 700;
-    font-size: 20px;
-    color: rgba(43, 41, 41, 0.658);
+    font-size: 25px;
+    color: rgba(22, 21, 21, 0.884);
     margin-top: 1rem;
 }
 
@@ -44,8 +75,11 @@
 }
 
 .description {
+    width: 100%;
+    height: 100%;
     font-size: 12px;
     color: rgba(43, 41, 41, 0.658);
+    margin: 0;
 }
 
 .btnBlock{
@@ -53,10 +87,10 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    padding-bottom: 1rem ;
     align-items: center;
     justify-content:center;
 }
+
 .buttonBin{
     width: 60px;
     height: 35px;
@@ -67,18 +101,19 @@
     justify-content:center;
     margin: 1rem 1rem 0 4px ;
 }
-.button{
+
+.buttonApp{
     width: 100%;
-    height: 35px;
-    font-size: small;
-    border: 1px solid rgb(125, 199, 14);
-    border-radius: 5px;
-    background-color: transparent;
-    color: rgb(125, 199, 14);
+    background-color: rgb(6, 65, 6);
+    color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: medium;
     margin-top: 1rem;
 }
-.button:hover{
-    background-color: rgba(125, 199, 14, 0.171);
+
+.buttonApp:hover{
+    background-color: rrgb(4, 39, 4)
 }
 
 
@@ -88,11 +123,37 @@
     border-radius: 10px;
     background-size: 100%;
     background-repeat: no-repeat;
+    border-radius: 10px;
 }
 
 @media (max-width: 640px) {
     .pageCard {
         flex-direction: column;
-        margin: 2rem 0.5rem 0 0.5rem;
+        margin: 1rem 0;
+    }
+    .containerImgProduct{
+        max-width: 100%;
+        height: 450px;
+    }
+
+    .miniFotoProductContainer{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin: 1rem 0 0 0;
+    }
+    .containerImgExtra{
+        margin: 0;
+        width: 120px;
+    }
+
+    .descriptionCard{
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .containerImgExtra{
+        width: 105px;
     }
 }

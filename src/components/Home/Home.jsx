@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Poster from "../Poster/Poster";
 import Products from "../Products/Products";
 import Categories from "../Categories/Categories";
+import Sidebar from "../Sidebar/Sidebar"
 
 import { useDispatch, useSelector } from "react-redux";
 import { filterByPrice } from "../../features/products/productsSlice";
@@ -20,10 +21,18 @@ const Home = () => {
 
     return (
         <>
-            <Poster />
-            <Products products={list} amount={4} title="Trendining" />
-            <Categories products={categories.list} amount={4} title="Worth seeing" />
-            {/* <Products products={filtered} amount={4} title="100" /> */}
+            {/* <Poster />
+            <Products products={list} amount={5} title="Trendining" />
+            <Categories products={categories.list} amount={5} title="Worth seeing" />
+            <Products products={filtered} amount={4} title="100" /> */}
+
+            <div className="wrapper">
+                <Sidebar />
+                <Poster />
+                <Products products={list} amount={5} title="Trendining" />
+                <Categories products={categories.list} amount={5} title="Worth seeing" />
+                {/* <Products products={filtered} amount={5} title="100"  /> */}
+            </div>
         </>
     )
 }

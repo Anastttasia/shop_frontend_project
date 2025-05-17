@@ -40,7 +40,7 @@ const UserSignupForm = ({ toggleCurrentFormType, closeForm }) => {
                 <input type='password' placeholder='Your password' name='password' value={values.password} autoComplete='off' onChange={handleChange} required></input>
                 <input type='avatar' placeholder='Your avatar' name='avatar' value={values.avatar} autoComplete='off' onChange={handleChange} required></input>
 
-                <div className='textForm' onClick={() => toggleCurrentFormType('login')}><p>I already have an account</p></div>
+                <div className='textForm' onClick={() => toggleCurrentFormType('login')}><p className='textFormP'>I already have an account</p></div>
 
                 <button type='submit'className='btnSubmitForm'>Create an account</button>
             </form>

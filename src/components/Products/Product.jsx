@@ -10,7 +10,7 @@ import { addItemToCart } from '../../features/user/userSlice';
 const Product = (item) => {
     const { title, price, description, images } = item;
 
-    const dispatch = useDispatch(); 
+    const dispatch = useDispatch();
     const currentImaga = images[0];
 
     const addToCart = () => {
@@ -20,24 +20,29 @@ const Product = (item) => {
 
     return (
         <div className="pageCard">
-
-            <div className="containerImg" style={{backgroundImage: `url(${currentImaga})`}}/>
-            {images.map((image, i) => (
-            <div 
-                key={i} 
-                className='' 
-                style={{backgroundImage: `url(${image})`}} 
-                onClick={()=>{}}
-            /> ))}
+            <div className="containerImgProduct" style={{ backgroundImage: `url(${currentImaga})` }} />
+            <div className='miniFotoProductContainer'>
+                {images.map((image, i) => (
+                    <div
+                        key={i}
+                        className='containerImgExtra'
+                        style={{ backgroundImage: `url(${image})` }}
+                        onClick={() => { }}
+                    />))}
+            </div>
             <div className="descriptionCard">
                 <Link to={ROUTES.HOME}> <button className="btnBack">Back</button> </Link>
-                <h3 className="name">{ title }</h3>
-                <h4 className="price">{ price }$</h4>
-                <p className="description">{ description }</p>
+                <h3 className="name">{title}</h3>
+                <div className="description">{description}</div>
+                <div className='descriptionBlock'>
+                    <div className='priceProductBlock'>
+                        <div className='priceProduct'>{price}$</div>
+                        <div className='oldPriceProduct' style={{ fontSize: 'x-large' }}>{Math.floor(price * 1.8)}$</div>
+                    </div>
+                </div>
+  
                 <div className="btnBlock">
-                    <button className="buttonBin">Delete</button>
-                    <button className="button" onClick={addToCart}>Add</button>
-                    {/* <button>♡</button> */}
+                    <button className="buttonApp" onClick={addToCart}>Add</button>
                 </div>
             </div>
         </div>

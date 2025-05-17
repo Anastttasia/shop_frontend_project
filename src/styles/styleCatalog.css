@@ -45,11 +45,13 @@
     padding: 0 4px 0 4px;
 }
 .titleProduct{
-    width: 200px;
+    width: 230px;
     height: 2rem;
     font-weight: 700;
-    font-size: 15px;
-    color: rgba(43, 41, 41, 0.658);
+    font-size: 20px;
+    color: rgba(32, 30, 30, 0.836);
+    margin: 10px 0 13px 0;
+    text-align: center;
 }
 .priceProductBlock{
     display: flex;
@@ -60,13 +62,13 @@
 }
 .priceProduct{
     font-size:xx-large;
-    color: green;
+    color: rgb(2, 92, 2);
     font-weight: 700;
 }
 
 .oldPriceProduct{
     font-size: large;
-    color: black;
+    color: rgba(0, 0, 0, 0.637);
     text-decoration: line-through;
     margin-left: 1rem;
 }
@@ -206,5 +208,14 @@
     .oldPriceProduct{
         font-size:medium;
 
+    }
+}
+
+@media (max-width: 430px) {
+    .priceProduct{
+        font-size: x-large;
+    }
+    .oldPriceProduct{
+        font-size: medium;
     }
 }
