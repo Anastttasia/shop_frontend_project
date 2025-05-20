@@ -22,14 +22,14 @@ const Home = () => {
     return (
         <>
             {/* <Poster />
-            <Products products={list} amount={5} title="Trendining" />
+            <Products products={list} amount={5} title="Trending" />
             <Categories products={categories.list} amount={5} title="Worth seeing" />
             <Products products={filtered} amount={4} title="100" /> */}
 
             <div className="wrapper">
                 <Sidebar />
                 <Poster />
-                <Products products={list} amount={5} title="Trendining" />
+                <Products products={list} amount={5} title="Trending" />
                 <Categories products={categories.list} amount={5} title="Worth seeing" />
                 {/* <Products products={filtered} amount={5} title="100"  /> */}
             </div>

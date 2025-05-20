@@ -122,7 +122,7 @@ h3 {
   font-size: 20px;
 }
 
-.imageSearch{
+.imageSearch {
   background-image: url('./nikePro.png');
   width: 60px;
   height: 60px;
@@ -131,22 +131,26 @@ h3 {
   background-repeat: no-repeat;
 }
 
-.searchCart{
+.searchCart {
   display: flex;
   flex-direction: row;
   background-color: #e4dada;
   border-radius: 10px;
   padding: 5px;
   align-items: center;
+  margin: 5px 0;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.288);
 }
 
-.titleSearch{
+.titleSearch {
   font-size: medium;
-  margin: 0 5px
+  margin: 0 5px;
+  width: 80%;
+
 }
 
-.titleSearch:hover{
-text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.288);
+.titleSearch:hover {
+  text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.288);
 }
 
 .slotHeader {
@@ -240,10 +244,15 @@ text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.288);
     right: 5px;
   }
 
-    .boxSearch {
-    width: 100px;
-    top: 55px;
+  .boxSearch {
+    width: 270px;
+    top: 58px;
     padding: 1rem;
-    left: 72px;
+    left: 0;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.288);
+  }
+
+  .titleSearch {
+    font-size: smaller;
   }
 }

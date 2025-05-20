@@ -1,16 +1,16 @@
-import { Link } from 'react-router-dom';
 import '../../styles/styleCatalog.css';
 
 import Category from './Category';
 import Poster from '../Poster/Poster';
+import Footer from '../Footer/Footer';
 
-const SingleCategory = ({ title, products = [], amount }) => {
-    const list = products.filter((_, i) => i < amount);
+const SingleCategory = () => {
 
     return (
         <>
-        <Poster />
-        <Category />
+            <Poster />
+            <Category />
+            <Footer />
         </>
     )
 };

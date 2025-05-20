@@ -1,6 +1,6 @@
 import '../../styles/styleCatalog.css'
 
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useGetProductsQuery } from '../../features/api/apiSlice';
 import { useSelector } from 'react-redux';
@@ -31,7 +31,7 @@ const Category = () => {
     const [values, setValues] = useState(defaultValues)
     const [params, setParams] = useState(defaultParams)
 
-    const { data, isLoading, isSuccess } = useGetProductsQuery(params);
+    const { data =[], isLoading, isSuccess } = useGetProductsQuery(params);
 
     useEffect(() => {
         if (!id) return;
@@ -44,7 +44,7 @@ const Category = () => {
     }, [id])
 
     useEffect(() => {
-        if (!isLoading) return;
+        if (isLoading) return;
 
         if (!data.length) return setEnd(true);
 
@@ -80,8 +80,8 @@ const Category = () => {
     console.log("data", data)
 
     return (
-        <section className='styleProducts '>
-            <h2>{cat}</h2>
+        <section className='styleProducts'>
+            <h1 className='moreContsiner'>{cat}</h1>
             <form className='filters' onSubmit={handlSubmit}>
                 <div className='filter'>
                     <span className='filtersName'>Product name</span>
@@ -89,11 +89,11 @@ const Category = () => {
                 </div>
                 <div className='filter'>
                     <span className='filtersName'>Price from</span>
-                    <input className='filtersInput' type='number' name='price_min' onChange={handlChange} placeholder='0' value={values.title}></input>
+                    <input className='filtersInput' type='number' name='price_min' onChange={handlChange} placeholder='0' value={values.price_min}></input>
                 </div>
                 <div className='filter'>
-                    <span className='filtersName'>Price to</span>
-                    <input className='filtersInput' type='number' name='price_max' onChange={handlChange} placeholder='0' value={values.title}></input>
+                    <div className='filtersName'>Price to</div>
+                    <input className='filtersInput' type='number' name='price_max' onChange={handlChange} placeholder='0' value={values.price_max}></input>
                 </div>
                 <button type='submit' hidden />
             </form>

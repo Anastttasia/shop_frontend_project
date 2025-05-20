@@ -131,6 +131,14 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
+    margin: 1rem 0;
+}
+
+.filter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
 }
 
 .filtersName{
@@ -145,6 +153,12 @@
     padding: 5px;
     font-size: medium;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 
 .moreContsiner{
     max-width: 100%;
@@ -191,6 +205,21 @@
         grid-template-columns: 1fr 1fr;
         grid-row: 1fr 1fr 1fr;
         gap: 5px;
+    }
+    .filters{
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-start;
+    }
+
+    .filtersInput{
+        width: 100%;
+    }
+
+
+    .filtersName{
+        width: 120px;
+        text-align: start;
     }
 
     .styleSection{

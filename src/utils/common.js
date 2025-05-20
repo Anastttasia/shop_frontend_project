@@ -8,8 +8,7 @@ export const buidURl = (url, params) => {
         urlWithParams += `${sign}${key}=${value}`
     });
 
-    console.log('urlWithParams')
-    console.log(urlWithParams)
+    console.log('urlWithParams', urlWithParams)
 
     return urlWithParams;
 }
