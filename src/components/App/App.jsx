@@ -3,8 +3,6 @@ import { useDispatch } from "react-redux";
 import AppRoutes from "../Routes/Routes";
 
 import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import Sidebar from "../Sidebar/Sidebar";
 import UserForm from "../User/UserForm";
 
 import { getCategoties } from "../../features/categories/categoriesSlice";
